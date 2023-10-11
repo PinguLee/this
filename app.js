@@ -1,6 +1,8 @@
-function a() {
-  console.log(this);
-  return;
+function a(callback) {
+  return callback;
 }
 
-a();
+console.log(a(function () {
+  console.log(this);
+  console.log(global);
+}));
